@@ -12,8 +12,8 @@
 #load input
 with open('input.txt', mode='r') as f:
     lst = [int(i.strip()) for i in f]
-
-
+    
+# Part 1:
 
 def find_sum_2020_part1(lst):
     for i in lst:
@@ -21,12 +21,9 @@ def find_sum_2020_part1(lst):
             if i + k == 2020:
                 return i*k
 
-
 print(find_sum_2020_part1(lst))
 
 # Part 2:
-
-
 def find_sum_2020_part2(lst):
     for i in lst:
         for k in lst:
@@ -34,6 +31,4 @@ def find_sum_2020_part2(lst):
                 if i + k + j == 2020:
                     return i*k*j
 
-
 find_sum_2020_part2(lst)
-
