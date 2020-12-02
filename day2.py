@@ -45,13 +45,12 @@ print(valid)
 
 # Part 2
 
-# not sure why this isn't working
 def check_pw_is_valid_part_2(password, policy, low, high):
     valid = 0
     for i in range(len(password)):
-        if password[i][low[i]-1] == policy[i] or password[i][high[i]-1] == policy[i]:
+        if (password[i][low[i]-1] == policy[i] and password[i][high[i]-1] != policy[i]) or (password[i][low[i]-1] != policy[i] and password[i][high[i]-1] == policy[i]):
             valid+=1
     return valid
 
 valid = check_pw_is_valid_part_2(password, policy, low, high) 
-print(valid) # wrong answer. Not sure why this isn't working.
+print(valid)
