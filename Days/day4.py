@@ -39,7 +39,7 @@ def chech_height(i):
 
     return False
 
-# Part 2:
+
 import re
 
 def full_checks(passports):
