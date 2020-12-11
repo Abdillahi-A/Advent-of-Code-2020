@@ -24,5 +24,3 @@ def find_sum_2020_part2(lst):
                     return i*k*j
 
 print(find_sum_2020_part2(lst))
-
-#test
