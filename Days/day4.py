@@ -30,7 +30,7 @@ def check_if_passport_is_valid(passports):
 
 # Part 2:
 
-def chech_height(i):
+def check_height(i):
     if i['hgt'][-2:] == 'cm' and 150<=int(i['hgt'][:-2])<=193:
         return True
     
@@ -49,7 +49,7 @@ def full_checks(passports):
              if len(i['byr']) == 4 and 1920<=int(i['byr'])<=2002 and \
                 len(i['iyr']) == 4 and 2010<=int(i['iyr'])<=2020 and \
                 len(i['eyr']) == 4 and 2020<=int(i['eyr'])<=2030 and \
-                chech_height(i) and \
+                check_height(i) and \
                 re.match(r"^#[a-f\d]{6}$", i['hcl']) and \
                 i['ecl'] in ['amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth'] and \
                 len(i['pid']) == 9:
@@ -59,7 +59,7 @@ def full_checks(passports):
                 if len(i['byr']) == 4 and 1920<=int(i['byr'])<=2002 and \
                 len(i['iyr']) == 4 and 2010<=int(i['iyr'])<=2020 and \
                 len(i['eyr']) == 4 and 2020<=int(i['eyr'])<=2030 and \
-                chech_height(i) and \
+                check_height(i) and \
                 re.match(r"^#[a-f\d]{6}$", i['hcl']) and \
                 i['ecl'] in ['amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth'] and \
                 len(i['pid']) == 9:
